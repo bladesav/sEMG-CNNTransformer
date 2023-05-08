@@ -10,6 +10,6 @@
 module load python
 module load scipy-stack
 
-cd ~/sEMG-CNNTransformer
+cd ~/projects/sEMG-CNNTransformer
 source newENV/bin/activate
 python src/model_compression/compression_main.py 455186_1_CNNAttention_Vanilla_0.8149.h5 # Make sure to replace with desired model filename

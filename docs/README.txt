@@ -2,7 +2,7 @@
 - A CNN-Transformer Model for Extracting Hand Gesture Inforamtion from sEMG Signals -
 -------------------------------------------------------------------------------------
 
-Place both sEMG-CNNTransformer and newENV folders in the root of CC directory.
+Place both sEMG-CNNTransformer and newENV folders in the 'projects' folder of CC directory.
 
 Preprocessing can be run by calling 'run_preprocess.bash'; see 'preprocess_main.py' for details about additional arguments that can be added to the file call in bash script.
 
@@ -10,7 +10,7 @@ Training can be run by calling 'run_training.bash'; see 'training_main.py' for d
 
 Model compression can be run by calling 'run_compression.bash'; see 'compression_main.py' for details about additional arguments that can be added to the file call in bash script.
 
-Any bash script can be run using the command 'sbatch TODO.bash'.
+Any bash script can be run using the command 'sbatch TODO.bash'. Run from projects/sEMG-CNNTransformer.
 
 ------------------
 - FILE STRUCTURE -
@@ -22,7 +22,7 @@ sEMG-CNNTransformer
 |- data                       (Location of all training and testing data)
 | |- processed                (Processed data, see section NAMING CONVENTIONS for file name explanation)
 | |- raw                      (Unzipped data, before processing)
-| |- zipped                   (Zipped data collected from http://ninapro.hevs.ch/data2)
+| |- zipped                   (Zipped data collected from http://ninapro.hevs.ch/data2**)
 |- docs                       (Documentation)
 |- images                     (Output folder for images, e.g. confusion matrices)
 | |- active                   (Location for images generated after 05/04/2023)
@@ -31,7 +31,7 @@ sEMG-CNNTransformer
 | |- active                   (Location for models generated after 05/04/2023)
 | |- archive                  (Location for models generated before 05/04/2023)
 | |- checkpoints              (Location for model checkpoints)
-|- src                        (Main code location *)
+|- src                        (Main code location)
 | |- data_preprocess          (Data preprocessing tools)
 | | |- preprocess_utils.py
 | | |- preprocess_main.py
@@ -44,7 +44,9 @@ sEMG-CNNTransformer
 |- logs                       (Location for output logs from Slurm logs)
 |- newENV                     (Environment for Slurm runs)
 
-* NOTE: All subfolders in /src have a utils.py and main.py file; calls are made to the main.py files.
+** NOTE: Due to disk quota issues, the zipped files could not be added from http://ninapro.hevs.ch/data2; download 
+the zipped data for each subject from the website and place in data/zipped folder. Extraction can be done with the 
+preprocessing code (see src/data_preprocess/preprocess_main.py).
 
 ----------------------
 - NAMING CONVENTIONS -

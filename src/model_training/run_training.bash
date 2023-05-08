@@ -10,6 +10,6 @@
 module load python
 module load scipy-stack
 
-cd ~/sEMG-CNNTransformer
+cd ~/projects/sEMG-CNNTransformer
 source newENV/bin/activate
 python src/model_training/training_main.py 1 $SLURM_JOB_ID
