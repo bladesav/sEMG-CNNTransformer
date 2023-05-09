@@ -2,7 +2,16 @@
 - A CNN-Transformer Model for Extracting Hand Gesture Inforamtion from sEMG Signals -
 -------------------------------------------------------------------------------------
 
-Place both sEMG-CNNTransformer and newENV folders in the 'projects' folder of CC directory.
+Place sEMG-CNNTransformer folder in the 'projects' folder of CC directory.
+
+*IMPORTANT*: In order to successfully run the code, two steps must be taken:
+
+1. In the sEMG-CNNTransformer folder, create a new virtual environment 'newENV' (virtualenv --no-download newENV); source this environment and 
+install all the requirements in 'requirements.txt'.
+
+2. Due to disk quota issues, the zipped Ninapro DB2 files could not be added from http://ninapro.hevs.ch/data2; download 
+the zipped data for each subject from the website and place in data/zipped folder. Extraction can be done with the 
+preprocessing code (see src/data_preprocess/preprocess_main.py).
 
 Preprocessing can be run by calling 'run_preprocess.bash'; see 'preprocess_main.py' for details about additional arguments that can be added to the file call in bash script.
 
@@ -43,10 +52,6 @@ sEMG-CNNTransformer
 | | |- training_main.py
 |- logs                       (Location for output logs from Slurm logs)
 |- newENV                     (Environment for Slurm runs)
-
-** NOTE: Due to disk quota issues, the zipped files could not be added from http://ninapro.hevs.ch/data2; download 
-the zipped data for each subject from the website and place in data/zipped folder. Extraction can be done with the 
-preprocessing code (see src/data_preprocess/preprocess_main.py).
 
 ----------------------
 - NAMING CONVENTIONS -
