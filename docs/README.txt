@@ -2,6 +2,16 @@
 - A CNN-Transformer Model for Extracting Hand Gesture Inforamtion from sEMG Signals -
 -------------------------------------------------------------------------------------
 
+-----------------------
+- OVERVIEW OF PROJECT -
+-----------------------
+
+The paper associated with this project can be found here: https://ieeexplore.ieee.org/document/10389021
+
+---------------
+- FIRST STEPS -
+---------------
+
 Place sEMG-CNNTransformer folder in the 'projects' folder of CC directory.
 
 *IMPORTANT*: In order to successfully run the code, two steps must be taken:
